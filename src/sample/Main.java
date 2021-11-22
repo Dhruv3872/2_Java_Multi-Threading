@@ -25,7 +25,7 @@ public class Main extends Application {
         instruction.setFont(Font.font("Calibri Light", FontWeight.BOLD, 25  ));
         root.getChildren().add(instruction);*/
         primaryStage.setTitle("Java_Multi-threading_demonstration_UI");
-        primaryStage.setScene(new Scene(root, 700, 255));
+        primaryStage.setScene(new Scene(root, 1000, 700 ));
         primaryStage.show();
     }
 
