@@ -16,6 +16,10 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        /* Defining a GridPane object, setting some of its parameters, defining a label
+        object, and adding it as a child of the GridPane object using Java code.
+        Later on, we did all of these in the fxml file, which is a better approach.
+         */
         /*GridPane root = new GridPane();
         root.setAlignment(Pos.CENTER);
         root.setVgap(10);

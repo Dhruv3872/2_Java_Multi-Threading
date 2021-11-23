@@ -41,7 +41,6 @@ public class Controller {
             progress2.visibleProperty().setValue(true);
             progress3.visibleProperty().setValue(true);
             progress4.visibleProperty().setValue(true);
-            //        System.out.println("Clicked.");
             Runnable thread1 = () -> {
                 try {
                     double x = 0.0;
@@ -53,9 +52,8 @@ public class Controller {
                         //progress1.setText(String.format("%f",progressBar1.getProgress()));
 
                     }
-                    //progressBar4.visibleProperty().setValue(false);
                 } catch (InterruptedException e) {
-                     //Nothing.
+                     //Nothing to do here for now.
                 }
             };
             Runnable thread2 = () -> {
@@ -66,11 +64,9 @@ public class Controller {
                         x = x + 0.01;
                         Thread.sleep(50);
                         progressBar2.setProgress(x);
-                        //progress1.setText(String.format("%f",progressBar1.getProgress()));
                     }
-                    //progressBar4.visibleProperty().setValue(false);
                 } catch (InterruptedException e) {
-                    //Nothing.
+                    //Nothing to do here for now.
                 }
             };
             Runnable thread3 = () -> {
@@ -81,12 +77,9 @@ public class Controller {
                         x = x + 0.01;
                         Thread.sleep(150);
                         progressBar3.setProgress(x);
-                        //progress1.setText(String.format("%f",progressBar1.getProgress()));
-
                     }
-                    //progressBar4.visibleProperty().setValue(false);
                 } catch (InterruptedException e) {
-                    //Nothing.
+                    //Nothing to do here for now.
                 }
             };
             Runnable thread4 = new Thread(() -> {
@@ -97,16 +90,17 @@ public class Controller {
                         Thread.sleep(200);
                         progressBar4.setProgress(x);
                     }
-                    //progressBar4.visibleProperty().setValue(false);
                 } catch (InterruptedException e) {
-                    //Nothing.
+                    //Nothing to do here for now.
                 }
             });
-            new Thread(thread1).start();
+            new Thread(thread1).start(); /* Necessary to run the run() method of the thread-1
+            object initialised as an object of the Runnable interface and
+            defined as an object of the Thread class.
+            The method is not visible as the lambda expression hides it within. */
             new Thread(thread2).start();
             new Thread(thread3).start();
             new Thread(thread4).start();
-            //progress1.setText(String.format("%f",progressBar1.getProgress()));
         }
     }
 }
