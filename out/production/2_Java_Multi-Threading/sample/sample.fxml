@@ -7,6 +7,9 @@
 <?import javafx.scene.control.ProgressBar?>
 <GridPane fx:controller="sample.Controller"
           xmlns:fx="http://javafx.com/fxml" alignment="top_left" hgap="10" vgap="10" gridLinesVisible="false">
+    <!--Have used the "gridlinesVisible" property of the GridPane to better understand which element
+        is taking how much space and to see the effect of the code on the UI more clearly.
+         Keeping it in the final code just for future reference.-->
     <padding><Insets top="25" right="25" bottom="25" left="25"/></padding>
     <Label text="Hi..">
         <font>
@@ -25,22 +28,22 @@
             <Font name="Calibri light bold" size="25"/>
         </font>
     </Label>
-        <Label text="File1" GridPane.columnIndex="0" GridPane.rowIndex="3">
+        <Label text="File1" GridPane.columnIndex="0" GridPane.rowIndex="3"> <!--padding="10" -->
             <font>
                 <Font size="20"/>
             </font>
         </Label>
-        <Label text="File2" GridPane.columnIndex="0" GridPane.rowIndex="4"> <!--padding="10" -->
+        <Label text="File2" GridPane.columnIndex="0" GridPane.rowIndex="4">
             <font>
                 <Font size="20"/>
             </font>
         </Label>
-        <Label text="File3" GridPane.columnIndex="0" GridPane.rowIndex="5"> <!--padding="10" -->
+        <Label text="File3" GridPane.columnIndex="0" GridPane.rowIndex="5">
             <font>
                 <Font size="20"/>
             </font>
         </Label>
-        <Label text="File4" GridPane.columnIndex="0" GridPane.rowIndex="6"> <!--padding="10" -->
+        <Label text="File4" GridPane.columnIndex="0" GridPane.rowIndex="6">
             <font>
                 <Font size="20"/>
             </font>
@@ -51,11 +54,9 @@
     <ProgressBar fx:id="progressBar2" progress="0.0" GridPane.columnIndex="1" GridPane.rowIndex="4" visible="false"  prefWidth="200"/>
     <ProgressBar fx:id="progressBar3" progress="0.0" GridPane.columnIndex="1" GridPane.rowIndex="5" visible="false"  prefWidth="200"/>
     <ProgressBar fx:id="progressBar4" progress="0.0" GridPane.columnIndex="1" GridPane.rowIndex="6" visible="false" prefWidth="200"/>
-    <!-- We will add text within the following labels within the run() methods of the threads
-        that we will introduce in the next commit.-->
-    <Label fx:id="progress1" text="Running on thread1." GridPane.columnIndex="2" GridPane.rowIndex="3" visible="false"></Label>
-    <Label fx:id="progress2" text="Running on thread2." GridPane.columnIndex="2" GridPane.rowIndex="4" visible="false"></Label>
-    <Label fx:id="progress3" text="Running on thread3."  GridPane.columnIndex="2" GridPane.rowIndex="5" visible="false"></Label>
-    <Label fx:id="progress4" text="Running on thread4." GridPane.columnIndex="2" GridPane.rowIndex="6" visible="false"></Label>
+    <Label fx:id="progress1" text="Running on thread1." GridPane.columnIndex="2" GridPane.rowIndex="3" visible="false"/>
+    <Label fx:id="progress2" text="Running on thread2." GridPane.columnIndex="2" GridPane.rowIndex="4" visible="false"/>
+    <Label fx:id="progress3" text="Running on thread3."  GridPane.columnIndex="2" GridPane.rowIndex="5" visible="false"/>
+    <Label fx:id="progress4" text="Running on thread4." GridPane.columnIndex="2" GridPane.rowIndex="6" visible="false"/>
 
 </GridPane>
