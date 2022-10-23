@@ -17,5 +17,5 @@ commit 3: title: Introduced 4 threads:
     purpose of the project has already been served.
 Commit: Did some housekeeping and addition of comments:
     Have removed some commented code. Have added some comments for understanding and explaining.
-    Have decided to drop the idea of investing time to learn to show the progress in % simulta~~~~~~~~neously for now.
+    Have decided to drop the idea of investing time to learn to show the progress in % simultalneously for now.
     Will try to add a video to demonstrate how exactly the code works in the next commit. 
